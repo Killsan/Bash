@@ -469,7 +469,7 @@ def connect_to_server(nick):
 #================================================================================================================
 
 def documentation():
-	url = 'files/index.html'
+	url = 'index.html'
 	webbrowser.open(url, new=0, autoraise=True)
 
 def main(nick='admin'):
