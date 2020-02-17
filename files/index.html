@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <title>Documentation for bash guide</title>
+</head>
+<body id='body'>
+    <header>
+        <div class='head'>
+            <p class="head_text">LINUX/BASH GUIDE</p>
+        </div>  
+    </header>
+    <main>
+        <div class='logo'><img src="linux.png" style='width: 300px;'></div>
+        <div class="main">
+            <div class="n1">
+                <div  id='account_creating_logo'><h2><center>Account creating</center></h2></div>
+                <button id="acc_quest1" onclick='quest_acc_answer()'>For what?</button>
+                <button id="acc_quest2" onclick='hide_acc_quest()'>Hide</button>
+                <div id="acc_quest_div">You creating account for 100% using of this program</div>
+            </div>
+            <div id="acc_creating_expl">
+                <img src="log_in1.png" id="log_in1">
+                <p id=acc_expl_text>In the "Your nickname" input place write your nickname, 
+                    when you created an account in this program, if you did not, you need to press
+                    "Sign up" button. If you wrote the wrong password for the account the password 
+                    input place will be automaticly clear and in the nickname input place will be string 
+                    that says 'Wrong password'. If there is no nickname in this program like you just typed, 
+                    in the nickname input place will be string with this kind a text: 'Nickname <\nickname you wrote>
+                    not found'.'
+                </p>
+            </div>
+            <div class="n2">
+                <img src="sign_up1.png" id="sign_up1">
+                <p id="acc_create1">
+                    In the first input place you need to create a new nick, you can write here 
+                    whatever you want, but you should remeber it, to login in the start of the program. 
+                    In this program cannot be two same nicks, so if you will insert someones nick, program
+                    will tell you about it. In the second place enter your google account. For example you 
+                    can enter your google play or youtube account. 
+                </p>
+            </div>
+            <div class="n3">
+                <img src="sign_up2.png" id="sign_up2">
+                <p id="acc_create2">
+                    If you did all right, then check your gmail. You will find the message from
+                    OSINT48@gmail.com (it's just a name) where will be your code that you will insert
+                    into 3d place input. This function is just to make sure that this is your account.
+                </p>
+            </div>
+            <div class="n4">
+                <img src="sign_up3.png" id="sign_up3">
+                <p id="acc_create3">
+                    If the code that this program send and the code that you insert are the same, then
+                    you can create a password. In the last two sections enter the same password. Why twice?
+                    To make sure that you will remember it in future and to prove that you was correct when 
+                    inserted it.
+                </p>
+            </div>
+            <div class="n5">
+                <img src="log_in2.png" id="log_in2">
+                <p id="acc_login">
+                    If the last window disappeared, then congratulation, you can insert your nick and password
+                    and start using this program.
+                </p>
+            </div>
+        </div>
+        <div id="main_img"><img src="main.png" id="last_img"></div>
+        <div id="source">
+            <a href="https://github.com/Killsan/Bash"><button id='source_bt'>Source code</button></a>
+        </div>
+    </main>
+
+    <script type='text/javascript'>
+        let start_hide_elems = [acc_quest2, acc_quest_div];
+        for(i of start_hide_elems){
+            i.hidden = true;
+        }
+
+        function quest_acc_answer(){
+            acc_quest2.hidden = false;
+            acc_quest_div.hidden = false;
+            acc_quest1.hidden = true;
+        }
+
+        function hide_acc_quest(){
+            acc_quest2.hidden = true;
+            acc_quest_div.hidden = true;
+            acc_quest1.hidden = false;
+        }
+
+    </script>
+</body>
+</html>
